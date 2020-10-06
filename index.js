@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const admin = require('firebase-admin');
+require('dotenv').config();
 
 
 
@@ -81,4 +82,4 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-app.listen(port)
+app.listen(process.env.PORT || port)
